@@ -1,6 +1,6 @@
 ### Bloow Music
 
-A web music streaming app.
+A web music streaming app for Bloow Africa.
 
 #### Stack
 

@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: 'Inter', sans-serif;
+}
 
 @layer components {
   .duration {
@@ -39,6 +45,15 @@
   .playerControls {
     @apply m-2 hover:cursor-pointer hover:text-yellow-400
   }
+  .textInput {
+    @apply m-4 p-2 rounded-sm
+  }
+  .wrapper {
+    @apply flex
+  }
+  .wrapper::-webkit-scrollbar {
+    @apply w-[0px]
+  }
 }
 
 body {
@@ -48,8 +63,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  width: 100%;
 }
 
 code {

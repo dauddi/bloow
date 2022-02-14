@@ -17,7 +17,7 @@
      id="defs6833" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
@@ -52,13 +52,13 @@
      id="layer1"
      transform="translate(0,-308.26774)">
     <circle
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.93258989;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#FBAF00;fill-opacity:1;stroke:#FBAF00;stroke-width:1.93258989;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4138"
        cx="370.40591"
        cy="696.74438"
        r="262.28003" />
     <ellipse
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.93258989;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#FBAF00;fill-opacity:1;stroke:#FBAF00;stroke-width:1.93258989;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4142"
        cx="96.820984"
        cy="716.07019"
@@ -70,15 +70,15 @@
        cy="716.07019"
        cx="651.75049"
        id="ellipse4144"
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.93258989;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#FBAF00;fill-opacity:1;stroke:#FBAF00;stroke-width:1.93258989;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.33723164;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#FBAF00;fill-opacity:1;stroke:#FBAF00;stroke-width:2.33723164;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 657.54644,641.56318 C 563.81007,308.32748 159.7149,369.19133 90.353442,633.3676 79.841007,340.68719 626.58633,265.09621 657.54644,641.56318 Z"
        id="rect4210"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <path
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.71587992;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#FBAF00;stroke-width:2.71587992;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 233.28583,807.32082 A 142.5837,142.5837 0 0 0 370.45898,911.10244 142.5837,142.5837 0 0 0 507.52604,807.32082 l -274.24021,0 z"
        id="path4213"
        inkscape:connector-curvature="0" />

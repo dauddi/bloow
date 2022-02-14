@@ -11,7 +11,7 @@ const auth = true;
 
 !auth ? <Navigate to="/welcome" /> : null;
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const songs = useSongs();
   dispatch(addToStoreSongsArray(songs))

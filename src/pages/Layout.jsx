@@ -2,14 +2,23 @@ import React from 'react';
 import { SidebarMenu } from '../features';
 import { MusicPlayerWidget } from '../widgets'
 
+import { useSelector } from 'react-redux';
+
 const Layout = ({ children }) => {
+  const { playQueue } = useSelector(state => state.songs)
   return (
-    <div className="w-screen" >
+    <div className="w-screen overflow-x-hidden " >
       <div className="w-full flex" >
-        <SidebarMenu />
-        { children }
+        <div className="sidebar fixed top-0 left-0 bottom-0 w-[250px] text-white " >
+          <SidebarMenu />
+        </div>
+        <div className="w-full" >
+          { children }
+        </div>
       </div>
-      <MusicPlayerWidget />
+      { playQueue.length && <div className="w-full fixed left-0 right-0 bottom-0 player h-[100px] bg-transparent text-slate-200 " >
+        <MusicPlayerWidget />
+      </div>}
     </div>
   )
 };

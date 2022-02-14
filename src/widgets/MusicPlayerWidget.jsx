@@ -63,23 +63,23 @@ const MusicPlayerWidget = () => {
 
   return (
     //audio player component
-    <div className="w-full flex p-4 justify-between items-center" >
+    <div className="w-screen relative flex md:p-4 justify-between items-center bg-slate-800 md:bg-transparent " >
       {/* displays music cover , title and artist name */}
-      <div className="flex w-[25%]" >
-        <img src={ playingSong.cover } className="w-[80px] h-[80px] " alt="vinyl image" />
-        <div className="flex flex-col justify-start ml-4">
-          <h3 className="p-2 font-extrabold text-slate-300 " > { playingSong.title } </h3>
-          <p className="text-xs p-2 text-yellow-600 font-bold " > { playingSong.metadata?.artist } </p>
+      <div className="md:absolute md:inset-y-0 md:left-0 flex w-[70%] md:w-[25%] " >
+        <img src={ playingSong.cover } className="w-[80px] h-[80px] p-0 md:w-[100px] odject-contain object-center " alt="vinyl image" />
+        <div className="flex flex-col justify-start m-1 md:ml-4">
+          <h4 className="p-1 m-0 md:p-2 font-extrabold text-slate-300 " > { playingSong.title } </h4>
+          <p className=" text-xs md:text-sm px-2 text-yellow-600 font-bold " > { playingSong.metadata?.artist } </p>
         </div>
       </div>
       {/* displays the controls and music slider  */}
-      <div className="flex flex-col relative justify-center items-center w-[40%]" >
+      <div className="flex flex-col relative justify-start items-center md:ml-[25%] w-[30%] md:w-[40%]" >
         <audio ref={audioPlayer} src={activeSongInQueue.song.link} preload="metadata" />
         <Controls activeSongInQueue={activeSongInQueue} isPlaying={isPlaying} />
-        <div className="w-full flex justify-center items-center " >
+        <div className="hidden w-full md:flex justify-center items-center " >
           <div ref={currentTimeRef} className="duration" > { currentTimeRef?.current?.value } </div>
           <div className="w-full relative bg-red-200 h-2 rounded-full " >
-            <input ref={secondaryRangeRef} onChange={e => handleSliderChange(e)} type="range" className="secondarySlider" />
+            {/* <input ref={secondaryRangeRef} onChange={handleSliderChange} type="range" className="secondarySlider" /> */}
             <div ref={progressBarRef} className={`absolute top-0 left-0 bg-slate-800 h-2 rounded-full appearance-none`} ></div>
             <input ref={rangeInput} defaultValue={0} type="range" className="slider"  />
           </div>
@@ -87,7 +87,7 @@ const MusicPlayerWidget = () => {
         </div>
       </div>
       {/* displays volume controls, songs in queue and extra controls  */}
-      <div className="flex items-end w-[25%]" >
+      <div className="hidden md:flex items-end w-[25%]" >
         extras
       </div>
     </div>

@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .duration {
+    @apply px-2 font-extrabold text-purple-300
+  }
+  .slider {
+    @apply 
+    appearance-none w-full
+    absolute top-0 left-0 
+    rounded-full h-2 bg-transparent
+    focus:outline-none focus:ring-0 focus:shadow-none
+  }
+  .secondarySlider {
+    @apply 
+    appearance-none w-full z-[999]
+    absolute top-0 left-0 
+    rounded-full h-2 bg-transparent
+    focus:outline-none focus:ring-0 focus:shadow-none
+  }
+  .secondarySlider::-webkit-slider-thumb {
+    @apply 
+    appearance-none rounded-full
+    w-2 h-2 hover:cursor-pointer bg-slate-800
+    ring-8 ring-transparent focus:ring-transparent
+    active:w-2 active:h-2 active:ring-8
+    cursor-pointer transition-all
+  }
+  .slider::-webkit-slider-thumb {
+    @apply
+    appearance-none rounded-full
+    w-2 h-2 hover:cursor-pointer bg-slate-800
+    ring-8 ring-slate-800 focus:ring-slate-800
+    active:w-2 active:h-2 active:ring-8
+    cursor-pointer transition-all
+  }
+  .playerControls {
+    @apply m-2 hover:cursor-pointer hover:text-yellow-400
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,9 +48,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.sidebar {
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.player {
+  background: #1D4350;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

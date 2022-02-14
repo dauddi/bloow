@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"title": "Track 001",
+		"cover":
+			"https://res.cloudinary.com/dauddi/image/upload/v1644640791/bloow%20images/cover1_uuxgqc.webp",
+		"link": "https://res.cloudinary.com/dauddi/video/upload/v1644639288/track0_lsaoib.mp3",
+		"metadata": {
+			"artist": "FaceSoul"
+		}
+	},
+	{
+		"id": 2,
+		"title": "Track 002",
+		"cover":
+			"https://res.cloudinary.com/dauddi/image/upload/v1644640812/bloow%20images/cover2_dvfsba.webp",
+		"link": "https://res.cloudinary.com/dauddi/video/upload/v1644639302/track1_eliprd.mp3",
+		"metadata": {
+			"artist": "Jack Lashow"
+		}
+	},
+	{
+		"id": 3,
+		"title": "Track 003",
+		"cover":
+			"https://res.cloudinary.com/dauddi/image/upload/v1644640804/bloow%20images/cover0_cmhqt5.webp",
+		"link": "https://res.cloudinary.com/dauddi/video/upload/v1644639236/track2_ruunwp.mp3",
+		"metadata": {
+			"artist": "Bashlov Kirr"
+		}
+	}
+]

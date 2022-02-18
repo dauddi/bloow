@@ -9,7 +9,7 @@ const title = "Bloow"
 const sidebarMenuItems = [
   {icon: FiHome, text: 'Home', path: '/'},
   {icon: FiSearch, text: 'Search', path: '/search'},
-  {icon: FiHeart, text: 'Fovorites', path: '/favorites'},
+  {icon: FiHeart, text: 'Favorites', path: '/favorites'},
   {icon: FiUpload, text: 'Upload', path: '/upload'},
  ]
 

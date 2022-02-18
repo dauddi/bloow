@@ -92,6 +92,15 @@ const AuthForm = ({ authenticate, dispatch }) => {
         />
          
       </form>
+
+      <div>
+        <pre>
+          { JSON.stringify({
+            email: "demo@bloow.com",
+            password: "demo",
+          }, null, 2 )}
+        </pre>
+      </div>
     </div>
   )
 }

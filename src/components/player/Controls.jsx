@@ -34,24 +34,6 @@ const Controls = ({ isPlaying, activeSongInQueue }) => {
   const toggleFavorite = () => {
     const prevState = isFavorite;
     setIsFavorite(!prevState);
-    prevState ? toast.error("🙍 Removed from favorites", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: "",
-      }
-    ) : toast.success("🎉 Added to favorites", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: "",
-    })
   }
 
   return (
@@ -66,17 +48,6 @@ const Controls = ({ isPlaying, activeSongInQueue }) => {
         </div>
         <BsFillSkipForwardCircleFill className="playerControls" />
       </div>
-      <ToastContainer
-      position="top-right"
-      autoClose={2000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      />
     </div>
   )
 }

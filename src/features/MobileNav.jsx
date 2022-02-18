@@ -11,9 +11,9 @@ const mobileMenuLinks = [
 
 const MobileNav = () => {
   return (
-    <div className='md:hidden w-screen border-t-[1px] border-gray-200 absolute bottom-0 inset-x-0 h-[8%] overflow-hidden flex justify-between items-center bg-white transition-all ' >
+    <div className='md:hidden w-screen border-t-[1px] shadow-md border-gray-200 fixed bottom-0 inset-x-0 h-[8%] overflow-hidden flex justify-between items-center bg-white transition-all ' >
       { mobileMenuLinks.map(link => (
-        <NavLink key={link.path} to={link.path} className="w-[25%] text-2xl h-full flex flex-col justify-center items-center hover:border-t-4 hover:font-extrabold hover:border-purple-800 hover:text-purple-900 hover:font-extrabold " >
+        <NavLink key={link.path} to={link.path} className="w-[25%] text-2xl h-full flex flex-col justify-center items-center hover:border-t-4 hover:border-purple-800 hover:text-purple-900 hover:font-extrabold " >
           <link.Icon />
           <small className='text-xs' > {link.text} </small>
         </NavLink>

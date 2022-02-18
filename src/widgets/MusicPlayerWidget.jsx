@@ -18,7 +18,6 @@ const MusicPlayerWidget = () => {
   const audioPlayer = useRef();
   const progressBarRef = useRef();
   const rangeInput = useRef();
-  const secondaryRangeRef = useRef();
   const currentTimeRef = useRef()
   const sliderAnimationRef = useRef();
   const timeAnimationRef = useRef();
@@ -66,7 +65,7 @@ const MusicPlayerWidget = () => {
     <div className="w-screen relative flex md:p-4 justify-between items-center bg-slate-800 md:bg-transparent " >
       {/* displays music cover , title and artist name */}
       <div className="md:absolute md:inset-y-0 md:left-0 flex w-[70%] md:w-[25%] " >
-        <img src={ playingSong.cover } className="w-[80px] h-[80px] p-0 md:w-[100px] odject-contain object-center " alt="vinyl image" />
+        <img src={ playingSong.cover } className="w-[80px] h-[80px] p-0 md:w-[100px] md:h-[100px] odject-contain object-center " alt="vinyl image" />
         <div className="flex flex-col justify-start m-1 md:ml-4">
           <h4 className="p-1 m-0 md:p-2 font-extrabold text-slate-300 " > { playingSong.title } </h4>
           <p className=" text-xs md:text-sm px-2 text-yellow-600 font-bold " > { playingSong.metadata?.artist } </p>
@@ -79,7 +78,6 @@ const MusicPlayerWidget = () => {
         <div className="hidden w-full md:flex justify-center items-center " >
           <div ref={currentTimeRef} className="duration" > { currentTimeRef?.current?.value } </div>
           <div className="w-full relative bg-red-200 h-2 rounded-full " >
-            {/* <input ref={secondaryRangeRef} onChange={handleSliderChange} type="range" className="secondarySlider" /> */}
             <div ref={progressBarRef} className={`absolute top-0 left-0 bg-slate-800 h-2 rounded-full appearance-none`} ></div>
             <input ref={rangeInput} defaultValue={0} type="range" className="slider"  />
           </div>

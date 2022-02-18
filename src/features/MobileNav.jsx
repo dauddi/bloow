@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FiHome, FiSearch, FiHeart, FiUpload, FiSettings } from "react-icons/fi";
 
 const mobileMenuLinks = [
@@ -10,14 +10,18 @@ const mobileMenuLinks = [
  ]
 
 const MobileNav = () => {
+  const location = useLocation();
   return (
     <div className='md:hidden w-screen border-t-[1px] shadow-md border-gray-200 fixed bottom-0 inset-x-0 h-[8%] overflow-hidden flex justify-between items-center bg-white transition-all ' >
-      { mobileMenuLinks.map(link => (
-        <NavLink key={link.path} to={link.path} className="w-[25%] text-2xl h-full flex flex-col justify-center items-center hover:border-t-4 hover:border-purple-800 hover:text-purple-900 hover:font-extrabold " >
-          <link.Icon />
-          <small className='text-xs' > {link.text} </small>
-        </NavLink>
-      )) }
+      { mobileMenuLinks.map(link => {
+        const isActive = link.path === location.pathname;
+        return (
+          <Link key={link.path} to={link.path} className={`w-[25%] text-2xl h-full flex flex-col justify-center items-center  ${ isActive ? "text-purple-900 font-extrabold border-t-4 border-purple-800" : null}  `} >
+            <link.Icon />
+            <small className='text-xs' > {link.text} </small>
+          </Link>
+        )
+      }) }
     </div>
   )
 }

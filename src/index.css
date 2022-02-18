@@ -19,21 +19,6 @@
     rounded-full h-2 bg-transparent
     focus:outline-none focus:ring-0 focus:shadow-none
   }
-  .secondarySlider {
-    @apply 
-    appearance-none w-full z-[999]
-    absolute top-0 left-0 
-    rounded-full h-2 bg-transparent
-    focus:outline-none focus:ring-0 focus:shadow-none
-  }
-  .secondarySlider::-webkit-slider-thumb {
-    @apply 
-    appearance-none rounded-full
-    w-2 h-2 hover:cursor-pointer bg-slate-800
-    ring-8 ring-transparent focus:ring-transparent
-    active:w-2 active:h-2 active:ring-8
-    cursor-pointer transition-all
-  }
   .slider::-webkit-slider-thumb {
     @apply
     appearance-none rounded-full
@@ -69,6 +54,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.landingPage {
+  background: rgb(210,184,219);
+  background: linear-gradient(90deg, rgba(210,184,219,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .sidebar {

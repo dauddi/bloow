@@ -9,20 +9,21 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux'
 import { playSong, pauseSong } from '../../redux/slices/songsSlice'
 
-const MobileControls = ({ isPlaying, isFavorite, toggleFavorite }) => {
+const MobileControls = ({ isPlaying, isFavorite, toggleFavorite, handlePause, handlePlay }) => {
   return (
     <div className='md:hidden flex gap-6 text-2xl justify-start items-center transition-all ' >
       <div onClick={toggleFavorite} > 
         {isFavorite ? <MdFavorite className='text-green-600 text-3xl' /> : <MdOutlineFavoriteBorder className='text-3xl' /> }
       </div>
-      { isPlaying ? <FaPause /> : <FaPlay /> }
+      { isPlaying ? <FaPause onClick={handlePause} /> : <FaPlay  onClick={handlePlay} /> }
     </div>
   )
 }
 
 const Controls = ({ isPlaying, activeSongInQueue }) => {
-  const [isFavorite, setIsFavorite] = useState(false)
   const dispatch = useDispatch();
+  const [isFavorite, setIsFavorite] = useState(false)
+
   const handlePlay = () => {
     dispatch(playSong(activeSongInQueue.song));
   }
@@ -55,7 +56,7 @@ const Controls = ({ isPlaying, activeSongInQueue }) => {
 
   return (
     <div className='h-full flex justify-start' >
-      <MobileControls isPlaying={isPlaying} isFavorite={isFavorite} toggleFavorite={toggleFavorite} />
+      <MobileControls handlePause={handlePause} handlePlay={handlePlay} isPlaying={isPlaying} isFavorite={isFavorite} toggleFavorite={toggleFavorite} />
       <div className="hidden md:flex text-3xl" >
         <BsFillSkipBackwardCircleFill className="playerControls " />
         <div>

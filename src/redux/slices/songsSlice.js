@@ -7,7 +7,10 @@ const initialState = {
 		song: {},
 		isPlaying: false,
 	},
-	favorites: [],
+	favorites: {
+		isPlayingAll: false,
+		songs: [],
+	},
 };
 
 const songsSlice = createSlice({
@@ -35,7 +38,28 @@ const songsSlice = createSlice({
 			};
 		},
 		addSongToFavorites: (state, { payload }) => {
-			state.favorites = [payload, ...state.favorites];
+			if (state.favorites.songs.some((song) => song.id === payload.id)) {
+				state.favorites.songs = state.favorites.songs.filter(
+					(song) => song.id !== payload.id
+				);
+			} else {
+				state.favorites.songs = [payload, ...state.favorites.songs];
+			}
+		},
+		toggleFavoritesPlayAll: (state, { payload }) => {
+			switch (payload) {
+				case "play": {
+					state.favorites.isPlayingAll = true;
+					break;
+				}
+				case "pause": {
+					state.favorites.isPlayingAll = false;
+					break;
+				}
+				default: {
+					break;
+				}
+			}
 		},
 	},
 });
@@ -46,6 +70,7 @@ export const {
 	pauseSong,
 	addSongToQueue,
 	addSongToFavorites,
+	toggleFavoritesPlayAll,
 } = songsSlice.actions;
 
 export default songsSlice.reducer;
